@@ -1,5 +1,4 @@
 [
-    /* Общие государственные команды */
     {"command": "/r", "description": "РП рация"},
     {"command": "/rr", "description": "нон РП рация"},
     {"command": "/d", "description": "РП рация департамента (общий гос. чат)"},
@@ -11,7 +10,6 @@
     {"command": "/team_history", "description": "фракционная история (принятие, увольнение, повышение)"},
     {"command": "/leave", "description": "покинуть фракцию по собственному желанию"},
 
-    /* Общие команды для лидера и заместителя */
     {"command": "/gnews (/gov)", "description": "подача новостей в общий чат (волна для гос. фракций)"},
     {"command": "/add_event", "description": "создать временной промежуток собеседования"},
     {"command": "/uniforms", "description": "настройка формы сотрудников"},
@@ -27,14 +25,12 @@
     {"command": "/r_mute [ID] [0] [причина]", "description": "снятие мута"},
     {"command": "/r_list", "description": "Поданные заявки на вступлению в организацию"},
 
-    /* Только для лидера */
     {"command": "/showall", "description": "список всех сотрудников"},
     {"command": "/teamcar", "description": "меню фракционного транспорта"},
     {"command": "/sellteamcar", "description": "продать фракционный транспорт"},
     {"command": "/tmenu", "description": "ограничение количества увольнений в день для заместителей"},
     {"command": "/t_notify", "description": "отправить уведомление в /nt всем сотрудникам организации"},
 
-    /* Правительство */
     {"command": "/liclist", "description": "список лицензеров в сети"},
     {"command": "/adlist", "description": "список адвокатов в сети"},
     {"command": "/medlist", "description": "список сотрудник для выдачи медицинской карты"},
@@ -44,7 +40,6 @@
     {"command": "/debtorsell", "description": "запустить процесс изъятия собственности должника"},
     {"command": "/debtorlist", "description": "список имущества, владельцы которого вовремя не оплатили собственность"},
 
-    /* Министерство Внутренних Дел */
     {"command": "/police_tablet", "description": "полицейский планшет со всей информацией о гражданах"},
     {"command": "/wanted", "description": "список подозреваемых преступников"},
     {"command": "/setmark [id]", "description": "отметить подозреваемого преступника на карте"},
@@ -72,7 +67,6 @@
     {"command": "/break_door", "description": "взломать закрытую дверь дома/бизнеса/огорода (для сотрудников ОМОН)"},
     {"command": "/su_reasons", "description": "настройка причин выдачи розыска (для лидера)"},
 
-    /* Министерство Здравоохранения */
     {"command": "/medlist", "description": "список сотрудников в сети для выдачи медицинской карты"},
     {"command": "/med (/hospital)", "description": "занять койку в больнице для бесплатного лечения"},
     {"command": "/skip [id]", "description": "выдать пропуск"},
@@ -84,7 +78,6 @@
     {"command": "/changesex [id] [стоимость операции]", "description": "сменить пол игроку"},
     {"command": "/m [текст]", "description": "сказать в автомобильный мегафон"},
 
-    /* Министерство Обороны */
     {"command": "/makegun [id оружия] [кол-во патронов]", "description": "собрать оружие из материалов или добавить боеприпасы к уже готовому с помощью патронов"},
     {"command": "/m [текст]", "description": "сказать в автомобильный мегафон"},
     {"command": "/department", "description": "взаимодействие со взводами организации (для командира взвода)"},
@@ -95,20 +88,17 @@
     {"command": "/vb [ID] [+]", "description": "выдать военный билет (для лидера и заместителя)"},
     {"command": "/vb [ID] [-]", "description": "забрать военный билет (не работает на донатный) (для лидера и заместителя)"},
 
-    /* Министерство Чрезвычайных Ситуаций */
     {"command": "/pour_water", "description": "заправка транспорта водой на парковке организации"},
     {"command": "/trans_water [ID] [количество]", "description": "перелив воды из одного транспорта в другой"},
     {"command": "/fires", "description": "информация об активных пожарах"},
     {"command": "/m [текст]", "description": "сказать в автомобильный мегафон"},
 
-    /* Национальная гвардия */
     {"command": "/makegun [id оружия] [кол-во патронов]", "description": "собрать оружие из материалов или добавить боеприпасы к уже готовому с помощью патронов"},
     {"command": "/platoon", "description": "меню взводов (для лидера и заместителя)"},
     {"command": "/add_platoon", "description": "создать новый взвод (для лидера и заместителя)"},
     {"command": "/dell_platoon", "description": "удалить взвод (для лидера и заместителя)"},
     {"command": "/warehouse", "description": "управление складами (для лидера и заместителя)"},
 
-    /* ТРК "Ритм" */
     {"command": "/radio", "description": "выбор волны вещания в общем чате"},
     {"command": "/topedit", "description": "рейтинг сотрудников по редактированию объявлений"},
     {"command": "/edit", "description": "начать редактирование объявления"},
@@ -117,7 +107,6 @@
     {"command": "/bring [ID]", "description": "подключить игрока к прямому эфиру"},
     {"command": "/t [текст]", "description": "отправить сообщение в прямой эфир"},
 
-    /* ФСИН (Тюрьма) */
     {"command": "/cuff [id]", "description": "надеть наручники на игрока"},
     {"command": "/uncuff [id]", "description": "снять наручники"},
     {"command": "/escort [id]", "description": "вести заключенного за собой"},
@@ -129,7 +118,6 @@
     {"command": "/search [id]", "description": "обыскать заключенного (с ранга Надзиратель)"},
     {"command": "/setfree", "description": "выдать разрешение адвокату для освобождения заключенных"},
 
-    /* Нелегальные организации - Мафия */
     {"command": "/f", "description": "РП рация"},
     {"command": "/ff", "description": "нон РП рация"},
     {"command": "/leave", "description": "покинуть мафию по собственному желанию"},
@@ -164,7 +152,6 @@
     {"command": "/sellzone [id] [цена]", "description": "продать территорию мафии (для лидера)"},
     {"command": "/tmenu", "description": "ограничение количества увольнений в день для заместителей (для лидера)"},
 
-    /* Банда */
     {"command": "/fm", "description": "РП рация"},
     {"command": "/nfm", "description": "нон РП рация"},
     {"command": "/makegun [id оружия] [кол-во патронов]", "description": "собрать оружие из материалов или добавить боеприпасы к уже готовому с помощью патронов"},
@@ -190,7 +177,6 @@
     {"command": "/gang_spawn", "description": "переделать дом под базу банды (для лидера)"},
     {"command": "/family_delete", "description": "полностью расформировать банду (для лидера)"},
 
-    /* Семья */
     {"command": "/fm", "description": "РП рация"},
     {"command": "/nfm", "description": "нон РП рация"},
     {"command": "/rc", "description": "переключение между каналами рации"},
@@ -201,7 +187,6 @@
     {"command": "/family_delete", "description": "расформировать семью (для лидера)"},
     {"command": "/gang_create", "description": "создать из семьи банду (для лидера)"},
 
-    /* Работы и увлечения */
     {"command": "/myjobs", "description": "список ваших работ"},
     {"command": "/leave", "description": "покинуть организацию или уволиться с работы"},
     {"command": "/bushelp", "description": "информация об автобусных маршрутах (Водитель маршрутки)"},
@@ -236,7 +221,6 @@
     {"command": "/exchange [id] [id]", "description": "осуществить обмен имуществом (Нотариус)"},
     {"command": "/take_duck", "description": "поднять мёртвую утку (Охота на уток)"},
 
-    /* Транспорт - Управление и действия */
     {"command": "/car", "description": "меню управления транспортом"},
     {"command": "/getmycar", "description": "отметить на карте личный транспорт"},
     {"command": "/carpass [id]", "description": "показать документы (технический паспорт)"},
@@ -258,23 +242,18 @@
     {"command": "/limit", "description": "управление лимитом скорости (круиз-контроль)"},
     {"command": "/eject [id]", "description": "выкинуть игрока из транспорта"},
 
-    /* Авторынок */
     {"command": "/cm_price", "description": "изменить отображаемую цену продажи"},
     {"command": "/cm_test_drive", "description": "предложить тестовое управление автомобилем"},
     {"command": "/sellmycar [id] [сумма]", "description": "продать автомобиль игроку"},
 
-    /* Пневмоподвеска */
     {"command": "/spanel", "description": "меню управления пневмоподвеской"},
 
-    /* Недвижимость - Общие команды для имущества */
     {"command": "/setspawn", "description": "выбор дома/квартиры/гостиницы в качестве места появления при входе в игру"},
     {"command": "/returnmoney", "description": "возврат части денег при изъятии имущества за неуплату"},
     {"command": "/exit", "description": "выйти из интерьера имущества"},
 
-    /* Аукцион */
     {"command": "/auction", "description": "меню аукциона"},
 
-    /* Дом и квартира */
     {"command": "/home", "description": "информация и управление домом/квартирой"},
     {"command": "/sellhome", "description": "продажа дома/квартиры государству"},
     {"command": "/sellmyhome [id] [сумма]", "description": "продажа дома/квартиры игроку"},
@@ -286,28 +265,23 @@
     {"command": "/gang_spawn", "description": "выбор дома/квартиры в качестве базы банды"},
     {"command": "/mhouse", "description": "панель управления домом на колесах"},
 
-    /* Гостиница */
     {"command": "/hotel", "description": "информация о гостинице"},
     {"command": "/homelock", "description": "закрыть или открыть личный номер в гостинице"},
 
-    /* Гараж */
     {"command": "/garage", "description": "информация и управление гаражом"},
     {"command": "/buygarage", "description": "покупка гаража у государства"},
     {"command": "/sellgarage", "description": "продажа гаража государству"},
     {"command": "/sellmygarage [id] [сумма]", "description": "продажа гаража игроку"},
 
-    /* Огород */
     {"command": "/garden", "description": "управление огородом"},
     {"command": "/buygarden", "description": "покупка огорода по государственной цене"},
     {"command": "/sellgarden [id] [сумма]", "description": "продажа огорода игроку"},
 
-    /* Киоск */
     {"command": "/changestallname", "description": "изменить название киоска"},
     {"command": "/sellstall", "description": "продажа киоска государству"},
     {"command": "/sellmystall [id] [сумма]", "description": "продажа киоска игроку"},
     {"command": "/return_items", "description": "вернуть снятый с продажи предмет"},
 
-    /* Бизнес */
     {"command": "/business", "description": "управление бизнесом"},
     {"command": "/buybiz", "description": "купить бизнес по государственной цене"},
     {"command": "/sellmybiz [id] [сумма]", "description": "продать бизнес игроку"},
@@ -320,7 +294,6 @@
     {"command": "/r_mute [ID] время причина", "description": "выдача мута (для управления персоналом)"},
     {"command": "/r_mute [ID] [0] [причина]", "description": "снятие мута (для управления персоналом)"},
 
-    /* Общие команды - Основные */
     {"command": "/menu", "description": "основное меню игрока"},
     {"command": "/gps", "description": "навигатор"},
     {"command": "/report", "description": "связь с администрацией"},
@@ -334,7 +307,6 @@
     {"command": "/s [текст]", "description": "кричать"},
     {"command": "/w [текст]", "description": "шептать"},
 
-    /* Списки */
     {"command": "/fwstore", "description": "список наград из колеса фортуны"},
     {"command": "/medlist", "description": "список сотрудников в сети для выдачи медицинской карты"},
     {"command": "/alist", "description": "список наказаний за 2 месяца от администрации"},
@@ -350,7 +322,6 @@
     {"command": "/admins", "description": "список администрации в сети"},
     {"command": "/onduty", "description": "список лидеров / адвокатов / мед. персонала"},
 
-    /* Взаимодействия */
     {"command": "/hi [id]", "description": "пожать руку/помахать"},
     {"command": "/give_item [id]", "description": "передать предмет из инвентаря"},
     {"command": "/wbook [id]", "description": "показать трудовую книжку"},
@@ -367,7 +338,6 @@
     {"command": "/info [id]", "description": "краткая информация об игроке"},
     {"command": "/rp [id] [+или-]", "description": "оценить RP уровень игрока"},
 
-    /* Действия */
     {"command": "/craft", "description": "открыть меню крафтинга"},
     {"command": "/armoff", "description": "снять бронежилет"},
     {"command": "/buy", "description": "показать ассортимент в супермаркете"},
@@ -401,32 +371,26 @@
     {"command": "/bind", "description": "открыть встроенный биндер"},
     {"command": "/button", "description": "использовать ближайшую кнопку"},
 
-    /* Донат */
     {"command": "/donate", "description": "активировать пополнение донат счёта"},
     {"command": "/package", "description": "забрать денежный набор"},
     {"command": "/mn пункт Дополнительно", "description": "меню доната"},
 
-    /* Бонусы и промокоды */
     {"command": "/pcode", "description": "окно для ввода промокода"},
     {"command": "/plist", "description": "окно для просмотра оставшегося времени до получения промокода"},
     {"command": "/bonus", "description": "получение денег за промокод"},
 
-    /* Свадьба */
     {"command": "/wedding [id]", "description": "заключить брачный союз"},
     {"command": "/divorce [id]", "description": "развестись"},
 
-    /* Еда */
     {"command": "/eat", "description": "съесть еду с подноса"},
     {"command": "/put", "description": "положить еду"},
     {"command": "/pick", "description": "поднять еду"},
 
-    /* Спортзал */
     {"command": "/set_style", "description": "выбрать изученный стиль боя"},
     {"command": "/fight [id] [сумма]", "description": "вызвать игрока на ринг"},
     {"command": "/find_fight", "description": "найти соперника для тренировки"},
     {"command": "/training_start", "description": "начать тренировку"},
 
-    /* Телефон */
     {"command": "/phone", "description": "открыть меню телефона"},
     {"command": "/call [номер]", "description": "позвонить"},
     {"command": "/sms [номер] [текст]", "description": "отправить сообщение"},
@@ -438,7 +402,6 @@
     {"command": "/watch", "description": "посмотреть на часы"},
     {"command": "/sellsim [id] [цена]", "description": "продать сим-карту"},
 
-    /* Футбол */
     {"command": "/fblc", "description": "футбольный чат вашей команды"},
     {"command": "/fb_msg", "description": "общий футбольный чат"},
     {"command": "/football", "description": "меню футбольного клуба"},
@@ -448,17 +411,14 @@
     {"command": "/fb_match", "description": "настройка позиций тренером/руководством"},
     {"command": "/fb_ticket", "description": "билеты на матч"},
 
-    /* Бумбокс */
     {"command": "/boombox", "description": "меню бумбокса"},
     {"command": "/boombox_put", "description": "поставить бумбокс"},
     {"command": "/boombox_pick", "description": "поднять бумбокс"},
 
-    /* Сезонные команды */
     {"command": "/snow_race", "description": "зарегистрировать на зимнюю гонку"},
     {"command": "/snow_battle", "description": "зарегистрировать на зимнюю битву"},
     {"command": "/sr_result", "description": "результаты последнего мероприятия"},
 
-    /* Системные команды */
     {"command": "/pagesize [10-20]", "description": "изменить количество строк в чате"},
     {"command": "/fontsize [от -3 до 5]", "description": "изменить размер шрифта"},
     {"command": "/fpslimit [20-90]", "description": "ограничить количество кадров в секунду"},
