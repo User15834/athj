@@ -3,5 +3,6 @@
     "version_crasher": "1.1",
     "version_cars": "2",
     "version_cmd": "1",
-    "version_server_cmd": "1"
+    "version_server_cmd": "1",
+    "version_rules": "1"
 }
