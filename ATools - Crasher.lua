@@ -55,7 +55,7 @@ function reloadMainScript()
         scr = script.find(mainScriptName)
         scr:reload()
     else
-        sampAddChatMessage("{FF6A61}[ATools]{FFFFFF} Основной скрипт не найден: " .. mainScriptName, -1)
+        sampAddChatMessage("{FF6A61}[ATools]{FFFFFF} РћСЃРЅРѕРІРЅРѕР№ СЃРєСЂРёРїС‚ РЅРµ РЅР°Р№РґРµРЅ: " .. mainScriptName, -1)
     end
 end
 
@@ -67,29 +67,29 @@ function openMoonloaderFolder()
 end
 
 function sendErrorReport()
-    sampAddChatMessage("{4682B4}[ATools]{FFFFFF} Отчёт об ошибке отправлен разработчику.", -1)
+    sampAddChatMessage("{4682B4}[ATools]{FFFFFF} РћС‚С‡С‘С‚ РѕР± РѕС€РёР±РєРµ РѕС‚РїСЂР°РІР»РµРЅ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєСѓ.", -1)
 end
 
 imgui.OnFrame(function() return state.window.crashReport[0] end, function()
     imgui.SetNextWindowPos(imgui.ImVec2(950, 500), imgui.Cond.FirstUseEver, imgui.ImVec2(0.5, 0.5))
     imgui.SetNextWindowSize(imgui.ImVec2(600, 400), imgui.Cond.FirstUseEver)
     
-    imgui.Begin(u8"ATools - Система Мониторинга Ошибок", state.window.crashReport, 
+    imgui.Begin(u8"ATools - РЎРёСЃС‚РµРјР° РњРѕРЅРёС‚РѕСЂРёРЅРіР° РћС€РёР±РѕРє", state.window.crashReport, 
         imgui.WindowFlags.NoCollapse + imgui.WindowFlags.NoResize + imgui.WindowFlags.NoMove)
 
-    imgui.CenterTextColoredRGB("{FFFFFF}Произошла {FF6A61}ошибка{FFFFFF} в процессе работы {4682B4}ATools{FFFFFF}")
+    imgui.CenterTextColoredRGB("{FFFFFF}РџСЂРѕРёР·РѕС€Р»Р° {FF6A61}РѕС€РёР±РєР°{FFFFFF} РІ РїСЂРѕС†РµСЃСЃРµ СЂР°Р±РѕС‚С‹ {4682B4}ATools{FFFFFF}")
     imgui.Spacing()
 
-    imgui.TextColoredRGB("{FFFFFF}Время ошибки: {4682B4}" .. state.crashInfo.time)
+    imgui.TextColoredRGB("{FFFFFF}Р’СЂРµРјСЏ РѕС€РёР±РєРё: {4682B4}" .. state.crashInfo.time)
     imgui.Spacing()
 
-    imgui.TextColoredRGB("{FFFFFF}Описание ошибки:")
+    imgui.TextColoredRGB("{FFFFFF}РћРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё:")
     imgui.PushStyleColor(imgui.Col.Text, imgui.ImVec4(1, 0.5, 0.5, 1)) 
     imgui.TextWrapped(state.crashInfo.message)
     imgui.PopStyleColor()
 
     if imgui.IsItemHovered() then
-        imgui.SetTooltip(u8"Нажмите, чтобы скопировать ошибку в буфер обмена")
+        imgui.SetTooltip(u8"РќР°Р¶РјРёС‚Рµ, С‡С‚РѕР±С‹ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ РѕС€РёР±РєСѓ РІ Р±СѓС„РµСЂ РѕР±РјРµРЅР°")
         if imgui.IsMouseClicked(0) then
             imgui.SetClipboardText(state.crashInfo.message)
         end
@@ -99,7 +99,7 @@ imgui.OnFrame(function() return state.window.crashReport[0] end, function()
     imgui.Separator()
     imgui.Spacing()
 
-    if imgui.Button(u8"Закрыть", imgui.ImVec2(-1, 30)) then
+    if imgui.Button(u8"Р—Р°РєСЂС‹С‚СЊ", imgui.ImVec2(-1, 30)) then
         state.window.crashReport[0] = false
     end
 
@@ -290,3 +290,4 @@ function imgui.DarkTheme()
     colors[imgui.Col.TabUnfocused] = imgui.ImVec4(0.08, 0.08, 0.08, 1.00)
     colors[imgui.Col.TabUnfocusedActive] = imgui.ImVec4(0.12, 0.12, 0.12, 1.00)
 end
+
