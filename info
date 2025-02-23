@@ -1,8 +1,16 @@
 {
-    "version": "4.0.0",
-    "version_crasher": "1.1",
-    "version_cars": "2",
-    "version_cmd": "1",
-    "version_server_cmd": "1",
-    "version_rules": "1"
+    "main": {
+        "version": "4.0.0"
+    },
+    "crasher": {
+        "version_crasher": "1.1",
+        "file_name": "crasher.lua"
+    },
+    "add": {
+        "version_cars": "2",
+        "version_cmd": "1",
+        "version_server_cmd": "1",
+        "version_rules": "1",
+        "version_gos_rules": "1"
+    }
 }
