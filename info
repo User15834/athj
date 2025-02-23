@@ -4,6 +4,5 @@
     "version_cars": "2",
     "version_cmd": "1",
     "version_server_cmd": "1",
-    "version_rules": "1",
-    "version_gos_rules": "1"
+    "version_rules": "1"
 }
