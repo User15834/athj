@@ -1,5 +1,5 @@
 script_name("ATools Crash Monitor")
-script_version("1.1")
+script_version("1.2")
 local imgui = require 'mimgui'
 local encoding = require 'encoding'
 local u8 = encoding.UTF8
