@@ -11,5 +11,6 @@
         "version_cmd": "1",
         "version_server_cmd": "1",
         "version_rules": "2",
+        "version_gos_rules": "2",
     }
 }
