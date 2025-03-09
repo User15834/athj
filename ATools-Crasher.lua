@@ -1,5 +1,5 @@
 script_name("ATools Crash Monitor")
-script_version("1.3")
+script_version("1.4")
 local imgui = require 'mimgui'
 local encoding = require 'encoding'
 local u8 = encoding.UTF8
@@ -8,7 +8,7 @@ encoding.default = 'CP1251'
 imgui.OnInitialize(function()
     local mainFont = imgui.GetIO().Fonts:AddFontFromFileTTF(getFolderPath(0x14) .. '\\trebucbd.ttf', 14, nil, imgui.GetIO().Fonts:GetGlyphRangesCyrillic())
     imgui.GetIO().FontDefault = mainFont
-    imgui.DarkTheme() 
+    imgui.ElegantTheme()
 end)
 
 local state = {
@@ -225,10 +225,11 @@ function imgui.TextColoredRGB(text)
     render_text(text)
 end
 
-function imgui.DarkTheme()
+function imgui.ElegantTheme()
     imgui.SwitchContext()
     local style = imgui.GetStyle()
 
+    -- Сохраняем оригинальные размеры и отступы
     style.WindowPadding = imgui.ImVec2(6, 6)
     style.FramePadding = imgui.ImVec2(5, 5)
     style.ItemSpacing = imgui.ImVec2(6, 6)
@@ -238,56 +239,77 @@ function imgui.DarkTheme()
     style.ScrollbarSize = 12
     style.GrabMinSize = 10
 
+    -- Тонкие границы для минимализма
     style.WindowBorderSize = 1
     style.ChildBorderSize = 1
     style.PopupBorderSize = 1
     style.FrameBorderSize = 0
-    style.TabBorderSize = 1
+    style.TabBorderSize = 0
 
+    -- Умеренное скругление углов
     style.WindowRounding = 8
     style.ChildRounding = 6
     style.FrameRounding = 6
     style.PopupRounding = 8
-    style.ScrollbarRounding = 6
+    style.ScrollbarRounding = 10
     style.GrabRounding = 8
     style.TabRounding = 6
 
+    -- Выравнивание текста
     style.WindowTitleAlign = imgui.ImVec2(0.5, 0.5)
     style.ButtonTextAlign = imgui.ImVec2(0.5, 0.5)
     style.SelectableTextAlign = imgui.ImVec2(0.0, 0.5)
 
+    -- Новая цветовая палитра в стиле "Elegant"
     local colors = style.Colors
-    colors[imgui.Col.Text] = imgui.ImVec4(0.90, 0.90, 0.90, 1.00)
-    colors[imgui.Col.TextDisabled] = imgui.ImVec4(0.50, 0.50, 0.50, 1.00)
-    colors[imgui.Col.WindowBg] = imgui.ImVec4(0.05, 0.05, 0.05, 1.00)
-    colors[imgui.Col.ChildBg] = imgui.ImVec4(0.08, 0.08, 0.08, 1.00)
-    colors[imgui.Col.PopupBg] = imgui.ImVec4(0.07, 0.07, 0.07, 1.00)
-    colors[imgui.Col.Border] = imgui.ImVec4(0.20, 0.20, 0.20, 1.00)
-    colors[imgui.Col.BorderShadow] = imgui.ImVec4(0.00, 0.00, 0.00, 0.00)
-    colors[imgui.Col.FrameBg] = imgui.ImVec4(0.12, 0.12, 0.12, 1.00)
-    colors[imgui.Col.FrameBgHovered] = imgui.ImVec4(0.24, 0.24, 0.24, 1.00)
-    colors[imgui.Col.FrameBgActive] = imgui.ImVec4(0.30, 0.30, 0.30, 1.00)
-    colors[imgui.Col.TitleBg] = imgui.ImVec4(0.05, 0.05, 0.05, 1.00)
-    colors[imgui.Col.TitleBgActive] = imgui.ImVec4(0.10, 0.10, 0.10, 1.00)
-    colors[imgui.Col.TitleBgCollapsed] = imgui.ImVec4(0.00, 0.00, 0.00, 0.51)
-    colors[imgui.Col.MenuBarBg] = imgui.ImVec4(0.10, 0.10, 0.10, 1.00)
-    colors[imgui.Col.ScrollbarBg] = imgui.ImVec4(0.02, 0.02, 0.02, 0.39)
-    colors[imgui.Col.ScrollbarGrab] = imgui.ImVec4(0.20, 0.20, 0.20, 1.00)
-    colors[imgui.Col.ScrollbarGrabHovered] = imgui.ImVec4(0.30, 0.30, 0.30, 1.00)
-    colors[imgui.Col.ScrollbarGrabActive] = imgui.ImVec4(0.40, 0.40, 0.40, 1.00)
-    colors[imgui.Col.CheckMark] = imgui.ImVec4(0.90, 0.90, 0.90, 1.00)
-    colors[imgui.Col.SliderGrab] = imgui.ImVec4(0.30, 0.30, 0.30, 1.00)
-    colors[imgui.Col.SliderGrabActive] = imgui.ImVec4(0.40, 0.40, 0.40, 1.00)
-    colors[imgui.Col.Button] = imgui.ImVec4(0.12, 0.12, 0.12, 1.00)
-    colors[imgui.Col.ButtonHovered] = imgui.ImVec4(0.24, 0.24, 0.24, 1.00)
-    colors[imgui.Col.ButtonActive] = imgui.ImVec4(0.30, 0.30, 0.30, 1.00)
-    colors[imgui.Col.Header] = imgui.ImVec4(0.12, 0.12, 0.12, 1.00)
-    colors[imgui.Col.HeaderHovered] = imgui.ImVec4(0.24, 0.24, 0.24, 1.00)
-    colors[imgui.Col.HeaderActive] = imgui.ImVec4(0.30, 0.30, 0.30, 1.00)
-    colors[imgui.Col.Tab] = imgui.ImVec4(0.08, 0.08, 0.08, 1.00)
-    colors[imgui.Col.TabHovered] = imgui.ImVec4(0.24, 0.24, 0.24, 1.00)
-    colors[imgui.Col.TabActive] = imgui.ImVec4(0.10, 0.10, 0.10, 1.00)
-    colors[imgui.Col.TabUnfocused] = imgui.ImVec4(0.08, 0.08, 0.08, 1.00)
-    colors[imgui.Col.TabUnfocusedActive] = imgui.ImVec4(0.12, 0.12, 0.12, 1.00)
-end
+    colors[imgui.Col.Text] = imgui.ImVec4(0.92, 0.92, 0.96, 1.00)         -- Основной текст (светло-серый)
+    colors[imgui.Col.TextDisabled] = imgui.ImVec4(0.55, 0.55, 0.58, 1.00) -- Неактивный текст
 
+    -- Фоновые цвета
+    colors[imgui.Col.WindowBg] = imgui.ImVec4(0.10, 0.10, 0.12, 1.00)    -- Основной фон
+    colors[imgui.Col.ChildBg] = imgui.ImVec4(0.14, 0.14, 0.16, 1.00)     -- Фон дочерних элементов
+    colors[imgui.Col.PopupBg] = imgui.ImVec4(0.18, 0.18, 0.20, 0.95)     -- Фон всплывающих окон
+
+    -- Границы
+    colors[imgui.Col.Border] = imgui.ImVec4(0.25, 0.27, 0.30, 0.60)      -- Тонкие темные границы
+    colors[imgui.Col.BorderShadow] = imgui.ImVec4(0.00, 0.00, 0.00, 0.00)
+
+    -- Элементы ввода
+    colors[imgui.Col.FrameBg] = imgui.ImVec4(0.20, 0.22, 0.25, 1.00)     -- Фон полей ввода
+    colors[imgui.Col.FrameBgHovered] = imgui.ImVec4(0.25, 0.27, 0.30, 1.00)
+    colors[imgui.Col.FrameBgActive] = imgui.ImVec4(0.30, 0.32, 0.35, 1.00)
+
+    -- Заголовки
+    colors[imgui.Col.TitleBg] = imgui.ImVec4(0.14, 0.14, 0.16, 1.00)
+    colors[imgui.Col.TitleBgActive] = imgui.ImVec4(0.18, 0.18, 0.20, 1.00)
+    colors[imgui.Col.TitleBgCollapsed] = imgui.ImVec4(0.10, 0.10, 0.12, 0.70)
+
+    -- Кнопки
+    colors[imgui.Col.Button] = imgui.ImVec4(0.25, 0.27, 0.30, 1.00)       -- Основные кнопки
+    colors[imgui.Col.ButtonHovered] = imgui.ImVec4(0.30, 0.55, 0.80, 1.00) -- Акцентный цвет при наведении (голубой)
+    colors[imgui.Col.ButtonActive] = imgui.ImVec4(0.20, 0.45, 0.65, 1.00) -- Темнее при нажатии
+
+    -- Скроллбары
+    colors[imgui.Col.ScrollbarBg] = imgui.ImVec4(0.14, 0.14, 0.16, 1.00)
+    colors[imgui.Col.ScrollbarGrab] = imgui.ImVec4(0.35, 0.37, 0.40, 1.00)
+    colors[imgui.Col.ScrollbarGrabHovered] = imgui.ImVec4(0.40, 0.42, 0.45, 1.00)
+    colors[imgui.Col.ScrollbarGrabActive] = imgui.ImVec4(0.45, 0.47, 0.50, 1.00)
+
+    -- Вкладки
+    colors[imgui.Col.Tab] = imgui.ImVec4(0.18, 0.18, 0.20, 1.00)
+    colors[imgui.Col.TabHovered] = imgui.ImVec4(0.30, 0.55, 0.80, 1.00)
+    colors[imgui.Col.TabActive] = imgui.ImVec4(0.25, 0.27, 0.30, 1.00)
+    colors[imgui.Col.TabUnfocused] = imgui.ImVec4(0.14, 0.14, 0.16, 1.00)
+    colors[imgui.Col.TabUnfocusedActive] = imgui.ImVec4(0.18, 0.18, 0.20, 1.00)
+
+    -- Меню
+    colors[imgui.Col.MenuBarBg] = imgui.ImVec4(0.14, 0.14, 0.16, 1.00)
+    colors[imgui.Col.Header] = imgui.ImVec4(0.20, 0.22, 0.25, 1.00)
+    colors[imgui.Col.HeaderHovered] = imgui.ImVec4(0.30, 0.55, 0.80, 1.00)
+    colors[imgui.Col.HeaderActive] = imgui.ImVec4(0.25, 0.27, 0.30, 1.00)
+
+    -- Чекбоксы и ползунки
+    colors[imgui.Col.CheckMark] = imgui.ImVec4(0.30, 0.55, 0.80, 1.00)
+    colors[imgui.Col.SliderGrab] = imgui.ImVec4(0.30, 0.55, 0.80, 1.00)
+    colors[imgui.Col.SliderGrabActive] = imgui.ImVec4(0.25, 0.45, 0.70, 1.00)
+end
