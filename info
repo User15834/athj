@@ -3,7 +3,7 @@
         "version": "4.0.0"
     },
     "crasher": {
-        "version_crasher": "1.3",
+        "version_crasher": "1.4",
         "file_name": "ATools-Crasher.lua"
     },
     "add": {
